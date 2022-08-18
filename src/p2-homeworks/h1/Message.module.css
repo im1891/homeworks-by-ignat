@@ -1,3 +1,54 @@
-.message {
+.messageWrapper {
+    display: inline-flex;
 
+    width: 300px;
+}
+
+.messageAvatar {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.messageAvatar img {
+
+    height: 50px;
+    border-radius: 100%;
+
+
+}
+
+.main {
+    position: relative;
+    background-color: #CDFFF6;
+    border-radius: 10px 10px 10px 0px;
+}
+
+.main::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 100%;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(60px at top left, transparent 49%, #CDFFF6 51%) no-repeat right bottom;
+}
+
+
+.messageTime {
+    display: flex;
+    justify-content: flex-end;
+
+
+}
+
+.name {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.messageText {
+    text-align: left;
 }
