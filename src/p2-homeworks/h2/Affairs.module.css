@@ -1,3 +1,30 @@
-.someClass {
+.affairsWrapper {
+    border-radius: 5px;
+    width: 240px;
+    background-color: bisque;
+}
+
+.affairsWrapper h3 {
+    text-align: center;
+}
+
+.affair {
+    display: flex;
+    flex-direction: row;
+}
+
+.affair .affairItem {
+    width: 80px;
+
+}
+
+.affairItem {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons button {
+
+    width: 60px;
 
 }
