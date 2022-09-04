@@ -1,7 +1,13 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
 .affairsWrapper {
     border-radius: 5px;
     width: 240px;
     background-color: bisque;
+    margin-left: 5px;
 }
 
 .affairsWrapper h3 {

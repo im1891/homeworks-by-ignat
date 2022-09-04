@@ -1,7 +1,75 @@
-.someClass {
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.inputClass {
+    border-radius: 2px;
+    margin-left: 5px;
+    border: 2px solid gray;
+    background-clip: padding-box;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
 }
 
+.inputClass::placeholder {
+    color: gray;
+    opacity: 0.4;
+}
+
+.inputClass:focus {
+
+    border-color: darkseagreen;
+    outline: 0;
+
+}
+
+.button {
+    border-radius: 2px;
+    margin-left: 2px;
+    border: 2px solid grey;
+    background-color: white;
+}
+
+.button:active {
+    background-color: white;
+    border: 3px solid darkseagreen;
+    color: darkseagreen;
+}
+
+button:hover {
+    border-color: darkseagreen;
+    background-color: darkseagreen;
+    cursor: pointer;
+    color: white;
+}
+
+.button:disabled {
+    background-color: red;
+    border: 3px solid red;
+    color: white;
+}
+
+.inputError:focus {
+    border: 3px solid red;
+
+}
+
+.buttonError {
+    background-color: red;
+    border-color: red;
+    color: white;
+}
+
+.button:disabled {
+    opacity: 0.4;
+}
+
+.totalCount {
+    margin-left: 5px;
+}
+
 .error {
-    border: 1px solid red;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
 }
