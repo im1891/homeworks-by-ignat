@@ -29,8 +29,13 @@
     justify-content: center;
 }
 
-.buttons button {
+.buttons .button {
 
     width: 60px;
 
+}
+
+.button:focus {
+    background-color: darkseagreen;
+    border-color: darkseagreen;
 }
