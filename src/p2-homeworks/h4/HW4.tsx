@@ -8,6 +8,7 @@ function HW4() {
     const [text, setText] = useState<string>('')
     const error = text ? '' : 'error'
 
+
     const showAlert = () => {
         if (error) {
             alert('введите текст...')
@@ -34,7 +35,7 @@ function HW4() {
                 />
 
                 <SuperInputText
-                    className={s.blue} // проверьте, рабоет ли смешивание классов
+                    className={s.blue} // проверьте, работает ли смешивание классов
                 />
 
                 {/*----------------------------------------------------*/}
@@ -65,6 +66,7 @@ function HW4() {
 
                 {/*// onChange тоже должен работать*/}
                 <SuperCheckbox checked={checked} onChange={testOnChange}/>
+
             </div>
 
             <hr/>

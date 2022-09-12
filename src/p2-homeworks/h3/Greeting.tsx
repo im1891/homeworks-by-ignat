@@ -1,5 +1,7 @@
 import React, {ChangeEvent} from 'react'
 import s from './Greeting.module.css'
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
+import SuperInputText from "../h4/common/c1-SuperInputText/SuperInputText";
 
 type GreetingPropsType = {
     name: string // need to fix any
@@ -18,20 +20,19 @@ const Greeting: React.FC<GreetingPropsType> = (
     const errorClass = error ? `${s.inputClass} ${s.inputError}` : s.inputClass; // need to fix with (?:)
 
     return (
-        <div>
-            <input value={name}
-                   onChange={(e: ChangeEvent<HTMLInputElement>) => setNameCallback(e)}
-                   className={errorClass}
-                   placeholder='Enter your name!'
-                   onKeyPress={(e) => onEnterPressHandler(e)}/>
+        <div className={s.greeting}>
 
-            {error ? <button className={`${s.button} ${s.buttonError}`} disabled>add</button> :
-                <button onClick={addUser} className={s.button}>add</button>}
+            <SuperInputText value={name} className={errorClass}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => setNameCallback(e)}
+                            placeholder='Enter your name!' onKeyPress={(e) => onEnterPressHandler(e)} error={error}
+                            spanClassName={s.error}/>
+
+            <SuperButton onClick={addUser} className={`${s.button} ${error ? s.buttonError : ''}`}
+                         disabled={!!error}>Add</SuperButton>
+
 
             <span className={s.totalCount}>Total users: {totalUsers}</span>
-            <div>
-                <span className={s.error}>{error}</span>
-            </div>
+
 
         </div>
     )

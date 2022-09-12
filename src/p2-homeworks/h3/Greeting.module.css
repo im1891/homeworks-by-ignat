@@ -1,25 +1,26 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-}
 
+.greeting {
+    display: flex;
+}
 .inputClass {
     border-radius: 2px;
     margin-left: 5px;
     border: 2px solid gray;
-    background-clip: padding-box;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    outline: none;
+
 
 }
 
 .inputClass::placeholder {
     color: gray;
+    font-size: small;
     opacity: 0.4;
 }
 
 .inputClass:focus {
-
+    border-radius: 2px;
     border-color: darkseagreen;
-    outline: 0;
+    outline: none;
 
 }
 
@@ -47,10 +48,12 @@ button:hover {
     background-color: red;
     border: 3px solid red;
     color: white;
+    opacity: 0.4;
 }
 
 .inputError:focus {
     border: 3px solid red;
+    outline: none;
 
 }
 
@@ -60,9 +63,6 @@ button:hover {
     color: white;
 }
 
-.button:disabled {
-    opacity: 0.4;
-}
 
 .totalCount {
     margin-left: 5px;
@@ -71,5 +71,5 @@ button:hover {
 .error {
     color: red;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 12px;
 }

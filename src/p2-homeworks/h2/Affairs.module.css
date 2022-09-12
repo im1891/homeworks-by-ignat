@@ -5,7 +5,7 @@
 
 .affairsWrapper {
     border-radius: 5px;
-    width: 240px;
+    width: 250px;
     background-color: bisque;
     margin-left: 5px;
 }
@@ -20,6 +20,7 @@
 }
 
 .affair .affairItem {
+    margin-bottom: 1px;
     width: 80px;
 
 }
@@ -29,11 +30,17 @@
     justify-content: center;
 }
 
-.buttons .button {
-
-    width: 60px;
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 
 }
+.button {
+    width: 60px;
+}
+
+
 
 .button:focus {
     background-color: darkseagreen;

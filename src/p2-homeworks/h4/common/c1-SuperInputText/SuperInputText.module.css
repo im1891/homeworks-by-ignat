@@ -1,12 +1,30 @@
 .superInput {
+    display: inline-block;
+    border-radius: 2px;
+    border: 2px solid gray;
+}
+
+.superInput:focus {
+    border-color: darkseagreen;
 
 }
 
 .errorInput {
-    border: 3px solid lime;
-    background: red;
+    border: 2px solid red;
+    background: rgba(255, 0, 0, .3);
+}
+
+.errorInput::placeholder {
+    color: transparent;
+}
+
+.errorInput:focus {
+    border: 2px solid red;
+    background: rgba(255, 0, 0, .3);
 }
 
 .error {
     color: red;
+    margin-left: 5px;
 }
+

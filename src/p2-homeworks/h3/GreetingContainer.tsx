@@ -21,23 +21,18 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
 
         let newName = e.currentTarget.value;
 
-        if (newName === '' || isFinite(parseInt(newName))) {
-
+        if (newName !== '' && !isFinite(parseInt(newName))) {
+            setError('')
+            setName(newName)
+        } else {
             setError('Please, enter correct name!')
             setName('')
-
-        } else {
-
-            setError('')
-            setName(newName.trim())
-
-
         }
     }
 
 
     const addUser = () => {
-        if (name === '') {
+        if (name.trim() === '') {
             setError('Please, enter correct name!')
 
         } else {
