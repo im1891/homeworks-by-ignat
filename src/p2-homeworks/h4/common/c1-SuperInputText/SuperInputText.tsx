@@ -48,13 +48,13 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
 
             type={'text'}
             onChange={onChangeCallback}
-            onKeyPress={onKeyPressCallback}
+            onKeyUp={onKeyPressCallback}
             className={finalInputClassName}
 
             {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
         />
 
-            {error && <div className={finalSpanClassName}>{error}</div>}
+            <div className={finalSpanClassName}>{error}</div>
 
         </div>
 

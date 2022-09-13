@@ -24,8 +24,8 @@ const Greeting: React.FC<GreetingPropsType> = (
 
             <SuperInputText value={name} className={errorClass}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => setNameCallback(e)}
-                            placeholder='Enter your name!' onKeyPress={(e) => onEnterPressHandler(e)} error={error}
-                            spanClassName={s.error}/>
+                            placeholder='Enter your name!' onKeyUp={(e) => onEnterPressHandler(e)} error={error}
+                            spanClassName={s.error} onBlur={setNameCallback}/>
 
             <SuperButton onClick={addUser} className={`${s.button} ${error ? s.buttonError : ''}`}
                          disabled={!!error}>Add</SuperButton>

@@ -22,11 +22,11 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
         let newName = e.currentTarget.value;
 
         if (newName !== '' && !isFinite(parseInt(newName))) {
-            setError('')
             setName(newName)
+            setError('')
         } else {
-            setError('Please, enter correct name!')
             setName('')
+            setError('Please, enter correct name!')
         }
     }
 
@@ -46,10 +46,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
 
 
     const onEnterPressHandler = (e: React.KeyboardEvent<HTMLInputElement>) => {
-        if (e.key === 'Enter') {
-            addUser()
-
-        }
+        e.key === 'Enter' && addUser()
     }
 
     const totalUsers: number = users.length // need to fix

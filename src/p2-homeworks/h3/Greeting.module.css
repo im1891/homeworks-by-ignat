@@ -1,5 +1,6 @@
 .greeting {
     display: flex;
+    align-items: flex-start;
 }
 
 .inputClass {

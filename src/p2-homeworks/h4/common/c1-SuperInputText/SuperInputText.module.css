@@ -1,5 +1,4 @@
 .superInput {
-    display: inline-block;
     border-radius: 2px;
     border: 2px solid gray;
 }
@@ -25,7 +24,7 @@
 }
 
 .error {
+    height: 20px;
     color: red;
-
 }
 
