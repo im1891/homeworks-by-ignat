@@ -6,7 +6,7 @@
 
 .superInput:focus {
     border-color: darkseagreen;
-
+    outline: none;
 }
 
 .errorInput {
@@ -21,10 +21,11 @@
 .errorInput:focus {
     border: 2px solid red;
     background: rgba(255, 0, 0, .3);
+    outline: none;
 }
 
 .error {
     color: red;
-    margin-left: 5px;
+
 }
 

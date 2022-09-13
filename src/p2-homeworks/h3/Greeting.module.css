@@ -1,7 +1,7 @@
-
 .greeting {
     display: flex;
 }
+
 .inputClass {
     border-radius: 2px;
     margin-left: 5px;
@@ -72,4 +72,5 @@ button:hover {
     color: red;
     font-weight: bold;
     font-size: 12px;
+    margin-left: 5px;
 }
