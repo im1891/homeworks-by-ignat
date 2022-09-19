@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+.headerWrapper {
+    position: relative;
+}
+
+.linksBlock {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 15px;
+    width: 220px;
+    height: 40px;
+    position: relative;
+    top: 0;
+    left: -210px;
+
+}
+
+.linksBlock a {
+    text-decoration: none;
+    color: hotpink;
+    font-weight: bold;
+}
+
+
+.button {
+    height: 30px;
+    width: 30px;
+    background-size: 30px 30px;
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/129/129154.png');
+}
+
+.buttonHidden {
+    display: none;
+
+}
+
+.open {
+    left: 0;
+    transition: .5s ease-in;
+}
+
+.close {
+    left: -210px;
+    transition: .5s ease-out;
+}
+
+.linksBlock a:hover,
+.linksBlock a:focus {
+    color: gold;
+}
+
