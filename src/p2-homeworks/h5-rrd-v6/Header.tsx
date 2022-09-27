@@ -9,12 +9,12 @@ function Header() {
     const [isOpen, setIsOpen] = useState(false)
 
     const openHandler = () => {
-        console.log(isOpen)
+
         setIsOpen(!isOpen)
     }
 
     const closeHandler = () => {
-        console.log(isOpen)
+
         isOpen && setTimeout(openHandler, 100)
     }
 
