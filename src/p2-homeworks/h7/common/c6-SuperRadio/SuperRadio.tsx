@@ -20,6 +20,7 @@ const SuperRadio: React.FC<SuperRadioPropsType> = (
         // onChange, onChangeOption
         onChange && onChange(e)
         onChangeOption && onChangeOption(e.currentTarget.value)
+
     }
 
     let optionClassName = s.option
